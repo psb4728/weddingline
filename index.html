@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모바일 청첩장 샘플</title>
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@4.5.1/dist/css/swiper.min.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.min.js" integrity="sha384-eKjgHJ9+vwU/FCSUG3nV1RKFolUXLsc6nLQ2R1tD0t4YFPCvRmkcF8saIfOZNWf/" crossorigin="anonymous"></script>
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b0d456a0fa6a12dd35daf0b8fb049ccb&libraries=services"></script>
+  <script>Kakao.init('b0d456a0fa6a12dd35daf0b8fb049ccb'); // 사용하려는 앱의 JavaScript 키 입력</script>
+  
+</head>
+<body>
+  <div class="popup_bg"></div>
+  <div class="main_container">
+    <div class="inner">
+      <audio id="videoplay" autoplay loop>
+        <source src="https://theirmood.com/src/bgm/love-story.mp3" type="audio/mp3">
+      </audio>
+
+      <a href="javascript:void();" class="bgm_btn">
+        <i class="xi xi-volume-off"></i>
+      </a>
+      
+      <section class="tit_wrap">
+        <p>the marriage</p>
+        <h1 class="date">12.25</h1>
+        <h2 class="name">김진호, 이나은 결혼합니다.</h2>
+      </section>
+
+      <section class="main_thumbnail_wrap section">
+        <div class="waves_wrap top">
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+            preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            </g>
+          </svg>
+        </div>
+
+        <article class="thumbnail_wrap">
+          <img src="/images/main_img.jpg" alt="">
+        </article>
+
+        <div class="waves_wrap bt" style="top: -64px;">
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+            preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            </g>
+          </svg>
+        </div>
+
+        <p class="wstation">
+          2022.12.25. Sunday 13:30 PM<br>
+          라도무스아트센터 1층, 아트리움홀
+        </p>
+      </section>
+
+      <section class="greetings_wrap section show-on-scroll">
+        <h3 class="title">초대합니다</h3>
+        <div class="intro_flower">
+          <img src="/images/intro-flower01.png" alt="">
+        </div>
+
+        <article class="greetings_text">
+          <p>저희 두 사람의 작은 만남이<br>
+            사랑의 결실을 이루어<br>
+            소중한 결혼식을 올리게 되었습니다.<br><br>
+            평생 서로 귀하게 여기며<br>
+            첫 마음 그대로 존중하고 배려하며 살겠습니다.<br><br>
+            오로지 믿음과 사랑을 약속하는 날<br>
+            오셔서 축복해 주시면 더없는 기쁨으로<br>
+            간직하겠습니다.
+          </p>
+        </article>
+
+        <div class="line"></div>
+
+        <article class="name_info">
+          <p>
+            <strong>김건호</strong> · <strong>이미자</strong>의 장남 <strong>김진호</strong>
+          </p>
+          <p>
+            <strong>이자명</strong> · <strong>유수지</strong>의 차녀 <strong>이나은</strong>
+          </p>
+        </article>
+      </section>
+
+      <section class="gellery_container section show-on-scroll">
+        <h3 class="title">우리의 순간</h3>
+
+        <div class="img-wrap">
+          <div class="case1">
+            <div class="slider-wrap">
+              <!-- 메인 사진 슬라이더 -->
+              <div class="swiper-container slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="/images/slide_img1.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/images/slide_img2.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/images/slide_img3.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/images/slide_img4.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/images/slide_img5.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+        
+              <!-- 썸네일 사진 -->
+              <div class="swiper-container slider-thumbnail">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="/images/slide_img1.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/images/slide_img2.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/images/slide_img3.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/images/slide_img4.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/images/slide_img5.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="popup-wrap">
+          <div class="inner">
+            <!-- 팝업 슬라이더 -->
+            <div class="swiper-container slider-popup">
+              <div class="top">
+                <button class="btn__close popup_close"></button>
+              </div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/images/slide_img1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/images/slide_img2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/images/slide_img3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/images/slide_img4.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/images/slide_img5.jpg" alt=""></div>
+              </div>
+              <!-- 네비게이션 버튼 -->
+              <!-- <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div> -->
+              <!-- 페이지네이션 불릿 -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+
+      <div class="calendar">
+        <div class="header">
+          <div class="title"><span class="month"></span></div>
+        </div>
+        <div class="day">
+          <div>sun</div>
+          <div>mon</div>
+          <div>tue</div>
+          <div>wed</div>
+          <div>thu</div>
+          <div>fri</div>
+          <div>sat</div>
+        </div>
+        <div class="dates"></div>
+      </div>
+
+      <P class="d_day"></P>
+
+      <section class="map_container section show-on-scroll">
+        <h3 class="title">오시는 길</h3>
+        <h4 class="t">라도무스아트센터 1층, 아트리움홀</h4>
+        <p class="p">대전 유성구 동서대로 639 (원신홍동, 라도무스아트센터)</p>
+
+        <article class="map_wrap">
+          <div id="map"></div>
+        </article>
+
+        <article class="public_transport">
+          <div class="item">
+            <h5>지하철/버스</h5>
+            <p>
+              시내버스: 102번, 108번, 706번, 106번, 113번 승차 시 홈플러스 유성점에서 하차<br>
+              지하철: 1호선 갑천역 3번 출구(돌다리 건너편)
+            </p>
+          </div>
+          <div class="item">
+            <h5>자가용</h5>
+            <p>
+              유성IC > 홈플러스 유성점 > 갑천변 유성컨벤션웨딩홀(약 3.7km)
+            </p>
+          </div>
+          <div class="item">
+            <h5>기차</h5>
+            <p>
+              대전역: 지하철 1호선 이용 또는 택시(약 20분 소요)이용<br>
+              서대전역: 지하철 1호선(서대전네거리역 탑승)이용 또는 택시(약 20분 소요)이용
+            </p>
+          </div>
+        </article>
+      </section>
+
+
+      <section class="gellery_container section show-on-scroll">
+        <h3 class="title">마음 전하실 곳</h3>
+        <div class="acc_items">
+          <article class="item">
+            <div class="acc_heading">신랑측 계좌번호</div>
+            <div class="acc_content">
+              <div class="bank_num_wrap">
+                <ul>
+                  <li id="copy-1" class="bank_num">신한은행 0000-0000-0000-00</li>
+                  <li>박주영</li>
+                </ul>
+                <button class="copy_btn" data-copy="copy-1">복사하기</button>
+              </div>
+              <div class="bank_num_wrap">
+                <ul>
+                  <li id="copy-2" class="bank_num">국민은행 0000-0000-0000-00</li>
+                  <li>박주이</li>
+                </ul>
+                <button class="copy_btn" data-copy="copy-2">복사하기</button>
+              </div>
+              <div class="bank_num_wrap">
+                <ul>
+                  <li id="copy-3" class="bank_num">농협은행 0000-0000-0000-00</li>
+                  <li>박주삼</li>
+                </ul>
+                <button class="copy_btn" data-copy="copy-3">복사하기</button>
+              </div>
+            </div>
+          </article>
+        
+          <article class="item">
+            <div class="acc_heading">신부측 계좌번호</div>
+            <div class="acc_content">
+              <div class="bank_num_wrap">
+                <ul>
+                  <li id="copy-4" class="bank_num">국민은행 0000-0000-0000-00</li>
+                  <li>한주연</li>
+                </ul>
+                <button class="copy_btn" data-copy="copy-4">복사하기</button>
+              </div>
+              <div class="bank_num_wrap">
+                <ul>
+                  <li id="copy-5" class="bank_num">신한은행 0000-0000-0000-00</li>
+                  <li>두주연</li>
+                </ul>
+                <button class="copy_btn" data-copy="copy-5">복사하기</button>
+              </div>
+              <div class="bank_num_wrap">
+                <ul>
+                  <li id="copy-6" class="bank_num">기업은행 0000-0000-0000-00</li>
+                  <li>삼주연</li>
+                </ul>
+                <button class="copy_btn" data-copy="copy-6">복사하기</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="comm_container">
+        <article class="contents_wrap">
+          <div>
+            <h6>신랑에게 연락하기</h6>
+            <ul>
+              <li>
+                <a href='tel: 010-1234-5678'>
+                  <i class="xi-call blue"></i>
+                </a>
+              </li>
+              <li>
+                <a href='sms: 010-1234-5678'>
+                  <i class="xi-mail"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6>신부에게 연락하기</h6>
+            <ul>
+              <li>
+                <a href='tel: 010-1234-5678'>
+                  <i class="xi-call pink"></i>
+                </a>
+              </li>
+              <li>
+                <a href='sms: 010-1234-5678'>
+                  <i class="xi-mail"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <h4 class="sub_tit">혼주에게 연락하기</h4>
+
+        <div class="parents_wrap">
+          <article class="contents_wrap parents">
+            <div>
+              <h6 class="blue">신랑측 혼주</h6>
+              <p>아버지 김건호</p>
+              <ul>
+                <li>
+                  <a href='tel: 010-1234-5678'>
+                    <i class="xi-call blue"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href='sms: 010-1234-5678'>
+                    <i class="xi-mail"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="blue">신랑측 혼주</h6>
+              <p>어미니 이미자</p>
+              <ul>
+                <li>
+                  <a href='tel: 010-1234-5678'>
+                    <i class="xi-call blue"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href='sms: 010-1234-5678'>
+                    <i class="xi-mail"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+  
+          <article class="contents_wrap parents">
+            <div>
+              <h6 class="pink">신부측 혼주</h6>
+              <p>아버지 이자명</p>
+              <ul>
+                <li>
+                  <a href='tel: 010-1234-5678'>
+                    <i class="xi-call pink"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href='sms: 010-1234-5678'>
+                    <i class="xi-mail"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="pink">신부측 혼주</h6>
+              <p>어머니 유수지</p>
+              <ul>
+                <li>
+                  <a href='tel: 010-1234-5678'>
+                    <i class="xi-call pink"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href='sms: 010-1234-5678'>
+                    <i class="xi-mail"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      
+      <!-- 방명록 -->
+      <section class="guest_container section anibox show-on-scroll">
+        <h3 class="title">방명록</h3>
+
+        <article class="guest_wrap">
+          <!-- 방명록은 최대 3개까지만 보이기 -->
+          <div class="item">
+            <div class="top">
+              <p class="name">김주리</p>
+              <p class="right">
+                <span>2022.12.11</span>
+                <i class="xi-close-min del_btn"></i>
+              </p>
+            </div>
+            <div class="con">
+              <p>
+                축하축하
+                결혼 축하합니다<br>
+                결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <p class="name">김주리</p>
+              <p class="right">
+                <span>2022.12.11</span>
+                <i class="xi-close-min del_btn"></i>
+              </p>
+            </div>
+            <div class="con">
+              <p>
+                축하축하
+                결혼 축하합니다<br>
+                결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다
+              </p>
+            </div>
+          </div>
+
+
+          <section class="bt_wrap">
+            <article class="pagiantion">
+              <ul>
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+            </article>
+            <button type="button" class="writing_btn">작성하기</button>
+          </section>
+        </article>
+      </section>
+
+
+      <!-- 방명록 작성 팝업 -->
+      <section class="writing_popup popup" id="writing">
+        <article class="head">
+          <h2>방명록 작성</h2>
+          <i class="xi-close close_btn"></i>
+        </article>
+      
+        <article class="form_wrap">
+          <form action="">
+            <div class="input_box">
+              <label for="guest_naem">이름</label>
+              <input type="text" id="guest_naem" placeholder="이름을 입력해 주세요.">
+            </div>
+            <div class="input_box">
+              <label for="guest_pw">비밀번호</label>
+              <input type="password" id="guest_pw" maxlength="4" placeholder="비밀번호 4자리를 입력해주세요.">
+            </div>
+            <div class="input_box line_none">
+              <label for="guest_con">내용</label>
+              <textarea name="guest_con" id="guest_con" cols="30" rows="10" maxlength="100"
+                placeholder="내용을 입력해주세요(최대 100자)"></textarea>
+            </div>
+      
+            <button type="submit" class="submit_btn">축하글 전달하기</button>
+          </form>
+        </article>
+      </section>
+      
+      <!-- 방명록 삭제 팝업 -->
+      <section class="delete_popup" id="delete">
+        <article class="wrap">
+          <input type="password" class="pw" id="pw" maxlength="4" placeholder="비밀번호" autofocus>
+          <button class="delete_btn">삭제하기</button>
+        </article>
+      </section>
+
+
+      <!-- 하단 이미지 -->
+      <section class="bt_container">
+        <div class="waves_wrap top">
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+            preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            </g>
+          </svg>
+        </div>
+
+        <article class="img_wrap">
+          <img src="/images/bt_main_img.jpg" alt="">
+          <p class="text_wrap">
+            예쁜 예감이 들었다.<br>
+            우리는 언제나 손을 잡고 있게 될 것이다.<br>
+            - 이이체, 인연 -
+          </p>
+        </article>
+
+        <div class="waves_wrap bt40">
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+            preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section class="kakao">
+        <a id="kakaotalk-sharing-btn" href="javascript:;">
+          <img src="/images/kakao_icon.png" alt="카카오톡 공유 보내기 버튼" />
+          카카오톡으로 초대장 보내기
+        </a>
+      </section>
+
+      <p class="copyright">
+        Copyrightⓒ2021.웨딩라인 All rights reserved.
+      </p>
+
+  </div>
+
+  <script>
+    // 썸네일 슬라이더
+    var sliderThumbnail = new Swiper(".slider-thumbnail", {
+      slidesPerView: 3,
+      spaceBetween: 4,
+      watchSlidesProgress: true
+      // centeredSlides: true,
+      // loop: true,
+    });
+
+    //메인 슬라이더
+    var slider = new Swiper(".slider", {
+      // loop: true,
+      autoHeight: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      thumbs: {
+        swiper: sliderThumbnail
+      }
+    });
+
+    // 팝업 슬라이더
+    var sliderPopup = new Swiper(".slider-popup", {
+      autoHeight: false,
+      spaceBetween: 40,
+      // loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+    // 메인 슬라이더, 팝업 슬라이더 연결
+    slider.controller.control = sliderPopup;
+    sliderPopup.controller.control = slider;
+    $(document).ready(function () {
+      // 사진보기 팝업 열기
+      $(".slider img").click(function () {
+        $(".popup-wrap").css("visibility", "visible");
+        $("html").css("overflow", "hidden");
+        $(".popup_bg").addClass('show');
+        $('.popup_bg').css('background', 'rgba(255, 255, 255, 0.7)');
+      });
+
+      // 사진보기 팝업 닫기
+      $(".popup_close").click(function () {
+        $(".popup-wrap").css("visibility", "hidden");
+        $("html").css("overflow", "visible");
+        $(".popup_bg").removeClass('show');
+      });
+
+      $(".popup_bg").click(function() {
+        $(".popup-wrap").css("visibility", "hidden");
+        $("html").css("overflow", "visible");
+        $(".popup_bg").removeClass('show');
+        $('.delete_popup').removeClass('show');
+      })
+    });
+
+    Kakao.Share.createDefaultButton({
+        container: '#kakaotalk-sharing-btn',
+        objectType: 'feed',
+        content: {
+          title: '김진호 ❤ 이나은 결혼합니다.',
+          description: '12월 10일 토요일 오후 1시 30분 아펠가모 광화문 B2 로스타뇨홀',
+          imageUrl:
+            'http://192.168.0.32:5500/images/main_img.jpg',
+          link: {
+            // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
+            mobileWebUrl: 'http://192.168.0.32:5500',
+            webUrl: 'http://192.168.0.32:5500',
+          },
+        },
+        buttons: [
+          {
+            title: '모바일 청첩장 보기',
+            link: {
+              mobileWebUrl: 'http://192.168.0.32:5500',
+              webUrl: 'http://192.168.0.32:5500',
+            },
+          },
+        ],
+      });
+  </script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/map.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

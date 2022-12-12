@@ -18,11 +18,11 @@
   <script>Kakao.init('b0d456a0fa6a12dd35daf0b8fb049ccb'); // 사용하려는 앱의 JavaScript 키 입력</script>
   
 </head>
-<body>
+<body class="ft_1">
   <div class="popup_bg"></div>
   <div class="main_container">
     <div class="inner">
-      <audio id="videoplay" autoplay loop>
+      <audio id="videoplay" loop>
         <source src="https://theirmood.com/src/bgm/love-story.mp3" type="audio/mp3">
       </audio>
 
@@ -36,7 +36,12 @@
         <h2 class="name">김진호, 이나은 결혼합니다.</h2>
       </section>
 
+      <div class="video_wrap">
+        <video class="eff_bg" src="/video/eff_bg5.mp4" autoplay loop></video>
+      </div>
+      
       <section class="main_thumbnail_wrap section">
+
         <div class="waves_wrap top">
           <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
             preserveAspectRatio="none" shape-rendering="auto">
@@ -55,7 +60,7 @@
           <img src="/images/main_img.jpg" alt="">
         </article>
 
-        <div class="waves_wrap bt" style="top: -64px;">
+        <div class="waves_wrap bt">
           <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
             preserveAspectRatio="none" shape-rendering="auto">
             <defs>
@@ -272,7 +277,7 @@
         </div>
       </section>
 
-      <section class="comm_container">
+      <section class="comm_container section show-on-scroll">
         <article class="contents_wrap">
           <div>
             <h6>신랑에게 연락하기</h6>

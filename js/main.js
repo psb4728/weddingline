@@ -34,6 +34,17 @@ function isElementInViewport(el) {
 }
 
 
+// // CSS root스타일 변경
+// let theme = document.querySelector(':root'); // 가상 클래스 요소 얻기
+// let styles = getComputedStyle(theme); // window.getComputedStyle 메서드를 이용하면, 해당 요소에 전역적으로 적용된 모든 형태의 style을 반환
+ 
+// styles.getPropertyValue('--main-color'); // 변수 값 얻기
+// theme.style.setProperty('--main-color', '변수값 입력'); // 변수 값 변경
+
+
+// var effBg = document.querySelector('.eff_bg');
+// effBg.playbackRate = 0.7;
+
 $(function() {
   // bgm
   var bgm = document.getElementById("videoplay");

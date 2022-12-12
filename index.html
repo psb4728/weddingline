@@ -18,17 +18,27 @@
   <script>Kakao.init('b0d456a0fa6a12dd35daf0b8fb049ccb'); // 사용하려는 앱의 JavaScript 키 입력</script>
   
 </head>
-<body class="ft_1">
+<body>
   <div class="popup_bg"></div>
   <div class="main_container">
+
+    <section class="header_wrap">
+      <ul class="font_style_wrap">
+        <li><a href="javascript:void();" onclick="fontBasic()">보통</a></li>
+        <li><a href="javascript:void();" onclick="fontBig()">크게</a></li>
+        <li><a href="javascript:void();" onclick="fontBbig()">더크게</a></li>
+      </ul>
+
+      <a href="javascript:void();" class="bgm_btn">
+        <i class="xi xi-volume-off"></i>
+      </a>
+    </section>
+    
     <div class="inner">
       <audio id="videoplay" loop>
         <source src="https://theirmood.com/src/bgm/love-story.mp3" type="audio/mp3">
       </audio>
 
-      <a href="javascript:void();" class="bgm_btn">
-        <i class="xi xi-volume-off"></i>
-      </a>
       
       <section class="tit_wrap">
         <p>the marriage</p>
@@ -49,9 +59,9 @@
               <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--bg-color)" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="var(--bg-color)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="var(--bg-color)" />
             </g>
           </svg>
         </div>
@@ -67,9 +77,9 @@
               <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--bg-color)" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="var(--bg-color)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="var(--bg-color)" />
             </g>
           </svg>
         </div>
@@ -386,6 +396,26 @@
         </div>
       </section>
 
+
+      <!-- 안내사항 -->
+      <section class="info_container section anibox show-on-scroll">
+        <article class="info_wrap">
+          <h5>드리고 싶은 말씀</h5>
+          <p>
+            코로나19가 진정될 거라 생각했지만,<br>
+            현재로서는 그 시기를 예측할 수 없게 되어<br>
+            긴 고민 끝에 예정대로 결혼식을 진행하게 되었습니다.<br><br>
+            인생의 가장 빛나는 날에<br>
+            소중한 분들을 모시고 기쁨을 나누면 좋겠으나<br>
+            혹 참석이 어려우시더라도 괜찮습니다.<br>
+            멀리서 축하 해주시는 분들과<br>
+            어려운 발검음 해주시는 분들<br>
+            모두 마음에 새기고 항상 행복하게 살겠습니다.<br>
+            감사합니다.
+          </p>
+        </article>
+      </section>
+
       
       <!-- 방명록 -->
       <section class="guest_container section anibox show-on-scroll">
@@ -488,9 +518,9 @@
               <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--bg-color)" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="var(--bg-color)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="var(--bg-color)" />
             </g>
           </svg>
         </div>
@@ -511,9 +541,9 @@
               <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--bg-color)" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="var(--bg-color)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="var(--bg-color)" />
             </g>
           </svg>
         </div>
@@ -529,7 +559,6 @@
       <p class="copyright">
         Copyrightⓒ2021.웨딩라인 All rights reserved.
       </p>
-
   </div>
 
   <script>

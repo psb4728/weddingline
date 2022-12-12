@@ -45,6 +45,19 @@ function isElementInViewport(el) {
 // var effBg = document.querySelector('.eff_bg');
 // effBg.playbackRate = 0.7;
 
+
+function fontBasic() {
+  document.querySelector("html").style.fontSize = "62.5%";
+}
+
+function fontBig() {
+  document.querySelector("html").style.fontSize = "70%";
+}
+
+function fontBbig() {
+  document.querySelector("html").style.fontSize = "75%";
+}
+
 $(function() {
   // bgm
   var bgm = document.getElementById("videoplay");

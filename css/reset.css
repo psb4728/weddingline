@@ -7,24 +7,36 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'RIDIBatang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TmoneyRoundWind';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWind.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 html {
+  font-family: var(--font);
   font-size: 62.5%;
   color: #585858;
   overflow-X: hidden;
 }
 
 body {
+  font-family: var(--font);
   font-size: 1.6rem;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   box-sizing: border-box;
   color: #585858;
   background: #efefef;
 }
-
-/* 폰트 설정 */
-.ft_1 { font-family: 'BMYEONSUNG', sans-serif; }
-.ft_2 { font-family: 'Noto Sans KR', sans-serif; }
 
 
 *,

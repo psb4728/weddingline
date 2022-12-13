@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-  --font: "RIDIBatang", sans-serif;
+  --font: "BMYEONSUNG", sans-serif;
   --noto-font: "Noto Sans KR", sans-serif;
   --bg-color: #fafafa;
   --main-color: #f79e9e;
@@ -68,7 +68,7 @@
 .section.is-visible .contents_wrap,
 .section.is-visible .sub_tit,
 .section.is-visible .info_wrap {
-  animation: up 0.6s linear forwards;
+  animation: up 0.5s linear forwards;
 }
 .section.is-visible .greetings_text p,
 .section.is-visible .name_info,
@@ -221,6 +221,9 @@
 }
 
 .name_info p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #777;
   line-height: 1.4;
   margin-bottom: 1rem;
@@ -229,6 +232,17 @@
 .name_info p strong {
   font-weight: 400;
   color: #202020;
+}
+
+.rip {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.3rem;
+}
+.rip img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .gellery_container .title {
@@ -243,12 +257,13 @@ button {
   background: none;
 }
 
-.btn__close {
+.btn_close {
   position: relative;
   width: 20px;
   height: 20px;
+  margin-right: 1.6rem;
 }
-.btn__close::before, .btn__close::after {
+.btn_close::before, .btn_close::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -258,10 +273,10 @@ button {
   border-radius: 4px;
   background-color: #585858;
 }
-.btn__close::before {
+.btn_close::before {
   transform: translateY(-50%) rotate(45deg);
 }
-.btn__close::after {
+.btn_close::after {
   transform: translateY(-50%) rotate(135deg);
 }
 
@@ -377,6 +392,7 @@ button {
 }
 .slider-wrap .swiper-container.slider-thumbnail .swiper-slide img {
   object-fit: cover;
+  height: 100%;
 }
 
 /* 팝업 슬라이더 */
@@ -492,7 +508,7 @@ button {
 }
 
 .map_container h4 {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: 400;
   opacity: 0;
 }

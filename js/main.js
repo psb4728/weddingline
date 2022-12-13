@@ -58,6 +58,8 @@ function fontBbig() {
   document.querySelector("html").style.fontSize = "75%";
 }
 
+document.getElementById('videoplay').play();
+
 $(function() {
   // bgm
   var bgm = document.getElementById("videoplay");

@@ -776,6 +776,7 @@ button {
   box-sizing: border-box;
 }
 .bt_wrap .writing_btn {
+  font-size: 1.6rem;
   color: var(--dark-gray);
 }
 

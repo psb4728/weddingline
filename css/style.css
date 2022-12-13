@@ -18,7 +18,10 @@
   align-items: baseline;
   justify-content: space-between;
   padding: 2rem 1.6rem;
+  transform: translateY(-35px);
+  opacity: 0;
   box-sizing: border-box;
+  animation: header 0.6s 0.4s linear forwards;
 }
 
 .font_style_wrap {
@@ -31,6 +34,16 @@
   color: var(--dark-gray);
 }
 
+@keyframes header {
+  0% {
+    transform: translateY(-35px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .bgm_btn {
   display: inline-block;
   text-align: right;

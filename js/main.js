@@ -58,10 +58,9 @@ function fontBbig() {
   document.querySelector("html").style.fontSize = "75%";
 }
 
+document.querySelector('.eff_bg').play();
 
 $(function() {
-  $('.eff_bg').play();
-  
   // bgm
   var bgm = document.getElementById("videoplay");
   $(".bgm_btn").click(function(){

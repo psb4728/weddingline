@@ -783,6 +783,7 @@ button {
   display: none;
   padding: 2rem;
   box-sizing: border-box;
+  z-index: 15;
 }
 .writing_popup.show {
   display: block;

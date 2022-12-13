@@ -58,10 +58,12 @@ function fontBbig() {
   document.querySelector("html").style.fontSize = "75%";
 }
 
+
 $(function() {
+  $('.eff_bg').play();
+  
   // bgm
   var bgm = document.getElementById("videoplay");
-  bgm.play();
   $(".bgm_btn").click(function(){
     if($(this).find("i.xi").hasClass("xi-volume-off")) {
       $(this).find("i.xi").removeClass("xi-volume-off");

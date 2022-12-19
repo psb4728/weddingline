@@ -227,6 +227,10 @@
 
         <article class="map_wrap">
           <div id="map"></div>
+
+          <a id="start-navigation" href="javascript:startNavigation()">
+            <img src="https://developers.kakao.com/assets/img/about/buttons/navi/kakaonavi_btn_medium.png" alt="길 안내하기 버튼" />
+          </a>
         </article>
 
         <article class="public_transport">
@@ -653,6 +657,18 @@
       })
     });
 
+
+    // 카카오네비 API
+    function startNavigation() {
+      Kakao.Navi.start({
+        name: '인천 계양구 계양대로 28',
+        x: 127.11205203011632,
+        y: 37.39279717586919,
+        coordType: 'wgs84',
+      });
+    }
+
+    // 카카오톡 공유 API
     Kakao.Share.createDefaultButton({
         container: '#kakaotalk-sharing-btn',
         objectType: 'feed',

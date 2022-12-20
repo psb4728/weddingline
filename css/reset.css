@@ -21,6 +21,12 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'SunBatang-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html {
   font-family: var(--font);

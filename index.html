@@ -30,6 +30,7 @@
   <link rel="icon" type="image/ico" href="/images/favicon.ico">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
   <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.min.js" integrity="sha384-eKjgHJ9+vwU/FCSUG3nV1RKFolUXLsc6nLQ2R1tD0t4YFPCvRmkcF8saIfOZNWf/" crossorigin="anonymous"></script>
   <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b0d456a0fa6a12dd35daf0b8fb049ccb&libraries=services"></script>
@@ -54,7 +55,7 @@
     
     <div class="inner">
       <audio id="videoplay" loop>
-        <source src="https://theirmood.com/src/bgm/bgm01.mp3" type="audio/mp3">
+        <source src="bgm/bgm01.mp3" type="audio/mp3">
       </audio>
 
       
@@ -65,7 +66,7 @@
       </section>
 
       <div class="video_wrap">
-        <video class="eff_bg" src="/video/eff_bg2.mp4" autoplay loop muted playsinline></video>
+        <video class="eff_bg" src="/video/eff_bg4.mp4" autoplay loop muted playsinline></video>
       </div>
       
       <section class="main_thumbnail_wrap section">
@@ -108,7 +109,7 @@
         </p>
       </section>
 
-      <section class="greetings_wrap section show-on-scroll">
+      <section class="greetings_wrap section show-on-scroll" id="capture_area">
         <h3 class="title">모시는 말씀</h3>
         <div class="intro_flower">
           <img src="/images/intro-flower01.png" alt="">
@@ -140,6 +141,8 @@
         </article>
       </section>
 
+
+      <!-- 갤러리 -->
       <section class="gellery_container section show-on-scroll">
         <h3 class="title">갤러리</h3>
 
@@ -227,10 +230,6 @@
 
         <article class="map_wrap">
           <div id="map"></div>
-
-          <a id="start-navigation" href="javascript:startNavigation()">
-            <img src="https://developers.kakao.com/assets/img/about/buttons/navi/kakaonavi_btn_medium.png" alt="길 안내하기 버튼" />
-          </a>
         </article>
 
         <article class="public_transport">
@@ -467,26 +466,25 @@
               </div>
               <div class="con">
                 <p>
-                  축하축하
-                  결혼 축하합니다<br>
-                  결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다
+                  나영아 결혼 너무 축하해!!<br>
+                  형부랑 알콩달콩 행복하게 살아야돼<br>
+                  진짜 축하한다!!<br><br>
                 </p>
               </div>
             </div>
             
             <div class="item">
               <div class="top">
-                <p class="name">김주리</p>
+                <p class="name">박슬기</p>
                 <p class="right">
-                  <span>2022.12.11</span>
+                  <span>2022.12.12</span>
                   <i class="xi-close-min del_btn"></i>
                 </p>
               </div>
               <div class="con">
                 <p>
-                  축하축하
-                  결혼 축하합니다<br>
-                  결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다결혼 축하합니다
+                  진수야 결혼 축하한다<br>
+                  행복한 결혼 생활하고 결혼식때 보자
                 </p>
               </div>
             </div>
@@ -657,16 +655,6 @@
       })
     });
 
-
-    // 카카오네비 API
-    function startNavigation() {
-      Kakao.Navi.start({
-        name: '인천 계양구 계양대로 28',
-        x: 127.11205203011632,
-        y: 37.39279717586919,
-        coordType: 'wgs84',
-      });
-    }
 
     // 카카오톡 공유 API
     Kakao.Share.createDefaultButton({
